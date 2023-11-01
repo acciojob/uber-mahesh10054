@@ -11,6 +11,7 @@ public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer driverId;
+    private String userName;
     private String mobile;
     private String password;
     @OneToMany(mappedBy = "driver",cascade = CascadeType.ALL)
@@ -20,17 +21,28 @@ public class Driver {
 
     public Driver() {
     }
-    public Driver(String mobile, String password, Cab cab) {
+
+    public Driver(String userName,String mobile, String password, Cab cab) {
+        this.userName = userName;
         this.mobile = mobile;
         this.password = password;
         this.cab = cab;
     }
+
     public Integer getDriverId() {
         return driverId;
     }
 
     public void setDriverId(Integer driverId) {
         this.driverId = driverId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getMobile() {

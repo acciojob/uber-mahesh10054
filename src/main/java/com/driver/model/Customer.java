@@ -20,11 +20,20 @@ public class Customer {
     public Customer() {
 
     }
-    public Customer(String mobileNo, String password,List<TripBooking> tripBookingList) {
+
+    public Customer(Integer customerId, String mobileNo, String password, List<TripBooking> tripBookingList) {
+        this.customerId = customerId;
         this.mobileNo = mobileNo;
         this.password = password;
         this.tripBookingList = tripBookingList;
     }
+
+    public Customer(String mobileNo, String password, List<TripBooking> tripBookingList) {
+        this.mobileNo = mobileNo;
+        this.password = password;
+        this.tripBookingList = tripBookingList;
+    }
+
 
     public String getPassword() {
         return password;

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class DriverController {
 	@Autowired
 	DriverServiceImpl driverService;
+
 	@PostMapping(value = "/register")
 	public ResponseEntity<Void> registerDriver(@RequestParam String mobile, @RequestParam String password){
 		driverService.register(mobile,password);

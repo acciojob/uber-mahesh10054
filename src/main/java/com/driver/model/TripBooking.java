@@ -22,6 +22,9 @@ public class TripBooking {
     @JoinColumn(name = "DriverId")
     private Driver driver;
 
+    public TripBooking() {
+    }
+
     public TripBooking(String fromLocation, String toLocation, Integer distanceInKm, TripStatus status, Integer bill, Customer customer, Driver driver) {
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
